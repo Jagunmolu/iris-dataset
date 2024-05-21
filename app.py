@@ -17,8 +17,8 @@ with col2:
     petal_l = st.slider("Petal lenght (cm)", 1.0, 7.0, 0.5)
     petal_w = st.slider("Petal width (cm)", 0.1, 2.5, 0.5)
 
-st.button("Predict type of Iris")
+predict_button = st.button("Predict type of Iris")
 
-if st.button("Predict type of Iris"):
+if predict_button:
     result = predict(np.array([[sepal_l, sepal_w, petal_l, petal_w]]))
     st.text(result[0])
